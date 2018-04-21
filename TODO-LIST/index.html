@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <title>todo list</title>
+    <meta charset="utf-8">
+    
+    <!-- font awesomw with JS framework -->
+   <link rel="stylesheet" href="css/reset.css">
+    <!-- Animate css -->
+    <link rel="stylesheet"  href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/main.css">
+
+  </head>
+  <body>
+    <div class="all">
+      
+
+  	<!-- Vue.js to do list example -->
+  <h1>ToDo List</h1>
+
+  <div id="todo">
+  	<section>
+  		<!-- html attributes that start with "v-" are
+  		called directives. they are html attributes that were created with vue.js and have lots of functionality
+  		tied to them -->
+
+  		<!-- v-model is targeting a var inside of our view instance and linking the 
+  		value of this input tag into the var of newitem -->
+  		<!-- v-on: we can but click or doubleclick or ..... or keyup.enter thats meen when i press enter instad od click button and add to our method on js -->
+      <i id="cart" class="fas fa-cart-arrow-down fa-2x"></i>
+  		<input
+  		 type="text" 
+  		 placeholder="add item"
+  		 v-model="newitem"
+  		 v-on:keyup.enter="additem"
+  		 >
+  		 <!-- interpolation {{}} is getting data straight from the model by 
+  		 referencing the data by it name. DIRECTLY ON THE HTML -->
+
+  		 <!-- 2 way data binding is when an element is attached
+  		 to var and both are updated to a shared value
+  		 so both change at the same time -->
+
+  		 <p class="write">{{ newitem}}</p>
+  	</section>
+  	<ol class="lil">
+  		<!-- v-for is a directive that repeats a template element
+  		for everey single item in a agiven array -->
+  		<!-- the v-for to repeat/ v-for="the item inside the data in the js put it in the arr" -->
+  		<li class="checked" v-for="item in todoList">
+  			<label>
+  				<!--item is the value of each index position 
+  				in the todolist arr -->
+  				{{item}}
+  			</label>
+  			<!-- here we use v-on agian to attach the button in the js -->
+  			<!-- the item in removeitem(item) is the exact array item that we are on in the v-for loop it has to be the item in the data  -->
+  			<button class="btn" v-on:click="removeitem(item)" type="button"><i id="s" class="far fa-trash-alt"></i></i></button>
+  		</li>
+  	</ol>
+  	
+  <!-- evvent data example -->
+ <!--  </div>
+  <button class="clicked" id="example" type="button"> click me</button>
+
+    </div> -->
+
+
+
+
+<!-- Vue js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="js/main.js"></script>
+  </body>
+</html>

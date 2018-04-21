@@ -1,0 +1,76 @@
+@font-face{
+	font-family: pencil;
+	src: url("../fonts/Pencil.ttf");
+}
+
+
+body{
+
+	background-image: url(../img/todo.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+input[type="text"] {
+
+    border: skyblue 1.2px solid;
+    margin: 3px 0;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    width: 260px;
+    position: relative;
+    left: 19px;
+    border-top-right-radius: 9px;
+    outline: none;
+    font-size: 20px;
+    padding: 5px 7px;
+    color: #2f2f2fc2;
+    font-family: pencil;
+    font-weight: 500;
+    
+}
+#cart{
+    position: absolute;
+    left: 62%;
+    top: 41%;
+    color: #c55026;
+}
+label {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+}
+ol.lil {
+    font-size: 20px;
+}
+.all{
+	text-align: center;
+	margin-top: 8%;
+}
+.all h1{
+    
+	color: #c55026;
+	font-size: 80px;
+}
+.lil {
+	display: inline-block;
+	text-align: center;
+	
+}
+
+
+li.checked {
+    border: skyblue 1.2px solid;
+    margin: 7px 0;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 9px;
+    color: #2f2f2fc2;
+    padding: 15px;
+    font-family: pencil;
+}
+#s{
+  background-color: transparent;
+  font-family: pencil;
+}
